@@ -6,7 +6,7 @@ java-sauce-example
 To get started, clone the repo:
 
 ```bash
-git clone https://github.com/saucelabs/java-sauce-example.git && cd java-sauce-example
+git clone https://github.com/Purushoth88/java-sauce-example.git && cd java-sauce-example
 ```
 
 Then run the following command to build the project and run the assocaited tests (requires Maven to be installed in your PATH):

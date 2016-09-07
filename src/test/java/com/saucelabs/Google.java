@@ -1,44 +1,14 @@
-package com.saucelabs;
-
-import com.saucelabs.common.SauceOnDemandAuthentication;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
+import java.util.concurrent.TimeUnit;
+import java.util.Date;
+import java.io.File;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.*;
+import static org.openqa.selenium.OutputType.*;
+import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import com.saucelabs.junit.Parallelized;
-import com.saucelabs.junit.ConcurrentParameterized;
-import com.saucelabs.junit.SauceOnDemandTestWatcher;
-
-import java.net.URL;
-import java.util.LinkedList;
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
-
-import com.saucelabs.common.SauceOnDemandAuthentication;
-import com.saucelabs.common.SauceOnDemandSessionIdProvider;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.net.URL;
-import java.util.LinkedList
 
 public class Google {
     public static void main(String[] args) throws Exception {

@@ -18,4 +18,4 @@ mvn test
 ### Example CI integration
 
 This repo demonstrates using Sauce with Travis CI. Here is a status badge which shows the build status of this repo's master branch and links to the latest build:
-[![Build Status](https://travis-ci.org/saucelabs/java-sauce-example.png?branch=master)](https://travis-ci.org/saucelabs/java-sauce-example)
+[![Build Status](https://travis-ci.org/saucelabs/java-sauce-example.png?branch=master)](https://travis-ci.org/Purushoth88/java-sauce-example)

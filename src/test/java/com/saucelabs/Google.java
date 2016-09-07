@@ -24,7 +24,7 @@ public class Google {
         wd.findElement(By.id("lst-ib")).clear();
         wd.findElement(By.id("lst-ib")).sendKeys("git");
         wd.findElement(By.xpath("//div[@id='sbse0']//div[.='github']")).click();
-        wd.findElement(By.linkText("How people build software · GitHub")).click();
+        wd.findElement(By.linkText("How people build software GitHub")).click();
         wd.findElement(By.linkText("Sign in")).click();
         wd.findElement(By.id("login_field")).click();
         wd.findElement(By.id("login_field")).clear();
@@ -36,7 +36,7 @@ public class Google {
         wd.findElement(By.xpath("//ul[@id='user-links']/li[3]/a/span")).click();
         wd.findElement(By.xpath("//ul[@id='user-links']/li[3]/a/span")).click();
         wd.findElement(By.xpath("//form[@class='logout-form']/button")).click();
-        wd = (FirefoxDriver) wd.switchTo().window(Windows 10 Firefox 48);
+        wd = (FirefoxDriver) wd.switchTo().window("Windows 10", "Firefox 48");
         wd.quit();
     }
     

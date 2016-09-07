@@ -131,9 +131,9 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
         if (version != null) {
             capabilities.setCapability(CapabilityType.VERSION, version);
         }
-/*        if (System.getenv("TUNNEL_IDENTIFIER") != null) {
+       if (System.getenv("TUNNEL_IDENTIFIER") != null) {
             capabilities.setCapability("tunnelIdentifier", System.getenv("TUNNEL_IDENTIFIER"));
-        }*/
+        }
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", "Sauce Sample Test");
         this.driver = new RemoteWebDriver(

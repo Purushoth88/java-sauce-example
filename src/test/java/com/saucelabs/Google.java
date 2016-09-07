@@ -9,6 +9,8 @@ import static org.openqa.selenium.OutputType.*;
 import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import com.saucelabs.common.SauceOnDemandAuthentication;
+import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 
 public class Google implements SauceOnDemandSessionIdProvider {
 

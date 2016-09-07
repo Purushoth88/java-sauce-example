@@ -18,6 +18,28 @@ public class Google implements SauceOnDemandSessionIdProvider {
     public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("Purush_12", "3b1c6846-0b29-40e3-a87a-70d93820d78a");
     
     public SauceOnDemandTestWatcher resultReportingTestWatcher = new SauceOnDemandTestWatcher(this, authentication);
+    
+        /**
+     * Represents the browser to be used as part of the test run.
+     */
+    private String browser;
+    /**
+     * Represents the operating system to be used as part of the test run.
+     */
+    private String os;
+    /**
+     * Represents the version of the browser to be used as part of the test run.
+     */
+    private String version;
+    /**
+     * Instance variable which contains the Sauce Job Id.
+     */
+    private String sessionId;
+
+    /**
+     * The {@link WebDriver} instance which is used to perform browser interactions with.
+     */
+private WebDriver driver;
 
      
     public static void set() throws Exception {

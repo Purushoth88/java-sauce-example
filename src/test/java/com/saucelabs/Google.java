@@ -35,7 +35,7 @@ public class Google {
         wd.findElement(By.xpath("//ul[@id='user-links']/li[3]/a/span")).click();
         wd.findElement(By.xpath("//ul[@id='user-links']/li[3]/a/span")).click();
         wd.findElement(By.xpath("//form[@class='logout-form']/button")).click();
-        wd = (FirefoxDriver) wd.switchTo().window("Windows 10", "Firefox 48");
+        //wd = (FirefoxDriver) wd.switchTo().window("Windows 10", "Firefox 48");
         wd.quit();
     }
     

@@ -53,8 +53,70 @@ import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class Google {
-     
+@RunWith(ConcurrentParameterized.class)
+public class Google implements SauceOnDemandSessionIdProvider {
+
+    /**
+     * Constructs a {@link SauceOnDemandAuthentication} instance using the supplied user name/access key.  To use the authentication
+     * supplied by environment variables or from an external file, use the no-arg {@link SauceOnDemandAuthentication} constructor.
+     */
+    public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("Purush_12", "3b1c6846-0b29-40e3-a87a-70d93820d78a");
+    /**
+     * JUnit Rule which will mark the Sauce Job as passed/failed when the test succeeds or fails.
+     */
+    @Rule
+    public SauceOnDemandTestWatcher resultReportingTestWatcher = new SauceOnDemandTestWatcher(this, authentication);
+
+    /**
+     * Represents the browser to be used as part of the test run.
+     */
+    private String browser;
+    /**
+     * Represents the operating system to be used as part of the test run.
+     */
+    private String os;
+    /**
+     * Represents the version of the browser to be used as part of the test run.
+     */
+    private String version;
+    /**
+     * Instance variable which contains the Sauce Job Id.
+     */
+    private String sessionId;
+
+    /**
+     * The {@link WebDriver} instance which is used to perform browser interactions with.
+     */
+    private WebDriver driver;
+
+    /**
+     * Constructs a new instance of the test.  The constructor requires three string parameters, which represent the operating
+     * system, version and browser to be used when launching a Sauce VM.  The order of the parameters should be the same
+     * as that of the elements within the {@link #browsersStrings()} method.
+     * @param os
+     * @param version
+     * @param browser
+     */
+    public SampleSauceTest(String os, String version, String browser) {
+        super();
+        this.os = os;
+        this.version = version;
+        this.browser = browser;
+    }
+
+    /**
+     * @return a LinkedList containing String arrays representing the browser combinations the test should be run against. The values
+     * in the String array are used as part of the invocation of the test constructor
+     */
+    @ConcurrentParameterized.Parameters
+    public static LinkedList browsersStrings() {
+        LinkedList browsers = new LinkedList();
+        browsers.add(new String[]{"Windows 8.1", "11", "internet explorer"});
+        browsers.add(new String[]{"Windows 7", "10", "internet explorer"});
+        browsers.add(new String[]{"OSX 10.8", "6", "safari"});
+        return browsers;
+    }
+    
     public static void set() throws Exception {
         RemoteWebDriver wd;
         DesiredCapabilities caps = DesiredCapabilities.firefox();

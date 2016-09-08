@@ -90,21 +90,6 @@ public class Google implements SauceOnDemandSessionIdProvider {
     private WebDriver driver;
 
     /**
-     * Constructs a new instance of the test.  The constructor requires three string parameters, which represent the operating
-     * system, version and browser to be used when launching a Sauce VM.  The order of the parameters should be the same
-     * as that of the elements within the {@link #browsersStrings()} method.
-     * @param os
-     * @param version
-     * @param browser
-     */
-    public SampleSauceTest(String os, String version, String browser) {
-        super();
-        this.os = os;
-        this.version = version;
-        this.browser = browser;
-    }
-
-    /**
      * @return a LinkedList containing String arrays representing the browser combinations the test should be run against. The values
      * in the String array are used as part of the invocation of the test constructor
      */

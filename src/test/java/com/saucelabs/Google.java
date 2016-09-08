@@ -138,4 +138,9 @@ public class Google implements SauceOnDemandSessionIdProvider {
             return false;
         }
     }
+    
+        @Override
+    public String getSessionId() {
+        return sessionId;
+    }
 }

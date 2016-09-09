@@ -47,7 +47,7 @@ public class SauceLabsGoogle {
         wd.findElement(By.linkText("JUnit")).click();
         wd.findElement(By.linkText("READ MORE")).click();
         wd.findElement(By.linkText("API documentation")).click();
-        wd = (FirefoxDriver) wd.switchTo().window();
+       // wd = (FirefoxDriver) wd.switchTo().window();
     }
     
 

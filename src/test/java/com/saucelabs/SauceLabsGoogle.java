@@ -16,7 +16,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import com.saucelabs.junit.Parallelized;
 import com.saucelabs.junit.ConcurrentParameterized;
 import com.saucelabs.junit.SauceOnDemandTestWatcher;
-import static org.testng.Assert.*;
 
 import java.util.concurrent.TimeUnit;
 import java.util.Date;
@@ -30,13 +29,13 @@ import static org.openqa.selenium.OutputType.*;
 public class SauceLabsGoogle {
     FirefoxDriver wd;
     
-    @BeforeMethod
+
     public void setUp() throws Exception {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
     
-    @Test
+
     public void SauceLabsGoogle() {
         wd.get("https://www.google.co.in/?gfe_rd=cr&ei=fUzSV9R06cDyB5_cisgF&gws_rd=ssl");
         wd.findElement(By.id("lst-ib")).click();
@@ -51,7 +50,7 @@ public class SauceLabsGoogle {
         wd = (FirefoxDriver) wd.switchTo().window();
     }
     
-    @AfterMethod
+
     public void tearDown() {
         wd.quit();
     }

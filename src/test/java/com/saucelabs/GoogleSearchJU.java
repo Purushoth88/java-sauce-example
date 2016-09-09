@@ -42,7 +42,7 @@ public class GoogleSearchJU {
         wd.findElement(By.linkText("JUnit")).click();
         wd.findElement(By.linkText("READ MORE")).click();
         wd.findElement(By.linkText("API documentation")).click();
-        wd = (FirefoxDriver) wd.switchTo().window(Windows 10 Firefox 48);
+        wd = (FirefoxDriver) wd.switchTo().window();
     }
     
     @AfterMethod
